@@ -10,6 +10,9 @@ from functions import scrape_data
 from functions import clean_data
 from functions import get_auction_data
 from functions import get_BIN_data
+from functions import get_avg_price
+from functions import avg_price_cond
+from functions import avg_price_month
 
 ### Gather User Input for Search Parameters
 keyword = input("What frame would you like to search for: ")
@@ -34,6 +37,12 @@ sale_option = input("Would you like to use (1) auction data or (2) buy it now da
 
 if sale_option == "1":
         auction_data = get_auction_data(cleaned_data)
+        print("Avg Sold Price for all pairs is: $" + str(get_avg_price(auction_data))) 
+        print(avg_price_cond(auction_data))
+        print(avg_price_month(auction_data))
         
 if sale_option == "2":
         BIN_data = get_BIN_data(cleaned_data)
+        print("Avg Sold Price for all pairs is: $" + str(get_avg_price(BIN_data))) 
+        print(avg_price_cond(BIN_data))
+        print(avg_price_month(BIN_data))

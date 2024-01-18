@@ -149,4 +149,25 @@ def get_BIN_data(df):
 
     return BIN_df
 
-### Funtion to Produce Desired Stats
+
+### Funtion to compute Avg Sold Price
+def get_avg_price(df):
+
+    avg_price = df['price'].mean()
+    
+    return avg_price
+
+
+### Funtion to compute Avg Sold Price
+def avg_price_cond(df):
+
+    cond_avg_price = df.groupby('condition')['price'].mean()
+    
+    return cond_avg_price
+
+
+def avg_price_month(df):
+
+    avg_price_by_month = df.groupby(df['sold_date'].dt.strftime('%B'))['price'].mean().sort_values(ascending = False)
+    
+    return avg_price_by_month
