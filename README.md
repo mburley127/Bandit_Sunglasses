@@ -1,2 +1,1 @@
-The sales_analysis project was created in order to better track 
-and implement business metrics in order to maximize efficiency and profit.
+The creation of the sales_analysis project was motivated by the need to refine the tracking and implementation of key business metrics, aiming to enhance operational efficiency and drive profit optimization initiatives.
